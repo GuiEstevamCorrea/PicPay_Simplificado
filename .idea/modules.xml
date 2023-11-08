@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/picpaysimplificado.iml" filepath="$PROJECT_DIR$/.idea/picpaysimplificado.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/PicPay_Simplificado.iml" filepath="$PROJECT_DIR$/.idea/PicPay_Simplificado.iml" />
+      <module fileurl="file://$PROJECT_DIR$/picpaysimplificado/picpaysimplificado.iml" filepath="$PROJECT_DIR$/picpaysimplificado/picpaysimplificado.iml" />
     </modules>
   </component>
 </project>
