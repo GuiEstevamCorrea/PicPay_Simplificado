@@ -1,10 +1,8 @@
 package com.picpaysimplificado.domain.user;
 
+import com.picpaysimplificado.dtos.UserDto;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.math.BigDecimal;
 
@@ -13,6 +11,7 @@ import java.math.BigDecimal;
 @Getter
 @Setter
 @AllArgsConstructor
+@NoArgsConstructor
 @EqualsAndHashCode(of = "id")
 public class User {
 
@@ -25,7 +24,7 @@ public class User {
     private String lastName;
 
     @Column(unique = true)
-    private String document;
+    private String documents;
 
     @Column(unique = true)
     private String email;
@@ -36,6 +35,16 @@ public class User {
 
     @Enumerated(EnumType.STRING) // Serve pra dizer que esse campo representa um dos valores do Enum
     private UserType userType;
+
+    public User(UserDto data){
+        this.firstName = data.firstName();
+        this.lastName = data.lastName();
+        this.balance = data.balance();
+        this.userType = data.userType();
+        this.password = data.password();
+        this.documents = data.documents();
+        this.email = data.email();
+    }
 
 
 }

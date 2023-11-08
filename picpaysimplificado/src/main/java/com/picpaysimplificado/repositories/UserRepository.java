@@ -10,7 +10,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
     /*
     * Utilizei o Optional pois ele pode ou não retornar um objeto do tipo User
     * */
-    Optional<User> findUserByDocuments(String document);
+    Optional<User> findUserByDocuments(String documents);
 
     Optional<User> findUserById(Long id);
 
